@@ -1,0 +1,8 @@
+"cat","Category"
+"Please copy the following URLs to your <a target='_blank' href='https://secure.findologic.com/login/index.php'>Findologic Account</a>:<br/><strong>CSV URL:</strong> http://SITE_URL/export/findologic_STORE_CODE.csv<br/><strong>Export URL:</strong> http://SITE_URL/index.php/findologic/csv/create/part/1/limit/1000/store_code/STORE_CODE/<br/>The number behind .../limit/ can be changed by your own. 100 should be the minimum number and as higher the used number is as higher should be your server power.<br/><br/>","Please copy the following URLs to your <a target='_blank' href='https://secure.findologic.com/login/index.php'>Findologic Account</a>:<br/><strong>CSV URL:</strong> http://SITE_URL/export/findologic_STORE_CODE.csv<br/><strong>Export URL:</strong> http://SITE_URL/index.php/findologic/csv/create/part/1/limit/1000/store_code/STORE_CODE/<br/>The number behind .../limit/ can be changed by your own. 100 should be the minimum number and as higher the used number is as higher should be your server power.<br/><br/>"
+"Relevance","Most relevant"
+"Name_Findo","A-Z"
+"Price_Findo","Lowest price first"
+"Date Added","Latest products first"
+"Sales Frequency","Topseller first"
+"Export Instock Product Only","Export Instock Product Only"

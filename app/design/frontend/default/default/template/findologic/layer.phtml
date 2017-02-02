@@ -1,0 +1,82 @@
+<?php if($this->canShowBlock()): ?>
+<?php $_filters = $this->getFilters() ?>
+<div class="block block-layered-nav">
+    <div class="block-title">
+        <strong><span><?php echo $this->__('Shop by') ?></span></strong>
+    </div>
+    <div class="block-content">
+        <?php //echo $this->getStateHtml() ?>
+		
+		<?php $active_filters = $this->getActiveFilters() ?>
+		<?php if(!empty($active_filters)): ?>
+		    <p class="block-subtitle"><?php echo $this->__('Currently Shopping By') ?></p>
+		    <ol class="currently">
+		    <?php foreach ($active_filters['data'] as $k=>$v): $inner = 0;?>
+	    		<?php foreach ($v as $k1=>$v1): ?>
+			        <li>
+			            <a href="<?php echo $active_filters['url'][$k.'_url'][$inner];?>" title="<?php echo $this->__('Remove This Item') ?>" class="btn-remove"><?php echo $this->__('Remove This Item') ?></a>
+			            <span class="label"><?php echo $this->__(/*$active_filter->getName()*/$k) ?>:</span> 
+						<?php 
+							if($k == "price")
+							{
+								$active_price_array = array();
+								$active_price_array = explode(' - ',$v1);
+								$active_price_array[0] = Mage::helper('core')->currency($active_price_array[0],true,false);
+								$active_price_array[1] = Mage::helper('core')->currency($active_price_array[1],true,false);
+								$active_price_display_string = implode(" - ",$active_price_array);
+								echo $active_price_display_string; 
+							}
+							else
+							{
+								echo $v1; 
+							}
+						?>
+			        </li>
+		    	<?php $inner++; endforeach; ?>
+		    <?php endforeach; ?>
+		    </ol>
+		    <div class="actions"><a href="<?php echo /*$this->getClearUrl()*/$active_filters['url']['clean_url'] ?>"><?php echo $this->__('Clear All') ?></a></div>
+		<?php endif; ?>
+		
+        <?php if($this->canShowOptions()): ?>
+            <p class="block-subtitle"><?php echo $this->__('Shopping Options') ?></p>
+            <dl id="narrow-by-list">               
+                <?php foreach ($_filters as $_filter):?>
+                	<?php if( $_filter->hasItems()):?>
+                    <dt><?php echo $this->__($_filter->getName()) ?></dt>
+                    <dd>
+						<ol>
+						
+						<?php foreach ($_filter->getItems() as $_item): ?>
+						    <li>
+								<?php
+									if($_filter->getCode() == "price")
+									{
+										$price_array = array();
+										$price_array = explode(' - ',$_item->getName());
+										$price_array[0] = Mage::helper('core')->currency($price_array[0],true,false);
+										$price_array[1] = Mage::helper('core')->currency($price_array[1],true,false);
+										$price_display_string = implode(" - ",$price_array);
+								?>
+						        	<a href="<?php echo $this->urlEscape($_item->getUrl()) ?>"><?php echo $price_display_string; ?></a>
+						        	<?php if ($_item->getCount()): ?>(<?php echo $_item->getCount() ?>)<?php endif;?>
+								<?php
+									}
+									else
+									{
+								?>
+									<a href="<?php echo $this->urlEscape($_item->getUrl()) ?>"><?php echo $_item->getName(); ?></a>
+						        	<?php if ($_item->getCount()): ?>(<?php echo $_item->getCount() ?>)<?php endif;?>
+								<?php } ?>
+						    </li>
+						<?php endforeach ?>
+						</ol>
+					</dd>
+                    <?php endif;?>
+                <?php endforeach; ?>
+            </dl>
+            <script type="text/javascript">decorateDataList('narrow-by-list')</script>
+        <?php endif; ?>
+    </div>
+</div>
+<?php endif; ?>

@@ -1,0 +1,12 @@
+{
+    "name": "dixeno/findologic",
+    "type": "magento-module",
+    "license": "OSL-3.0",
+    "description": "FINDOLOGIC, die intelligente Such-Software für mehr Umsatz in Ihrem Online-Shop!",
+     "authors": [
+         {
+             "name": "Dixeno",
+             "email": "c.schmidt@dixeno.de" 
+         }
+      ]
+}

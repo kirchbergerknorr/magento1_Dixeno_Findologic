@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<package>
+    <name>Dixeno_Findologic</name>
+    <version>1.4.9</version>
+    <stability>stable</stability>
+    <license>Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>FINDOLOGIC, die intelligente Such-Software f&#xFC;r mehr Umsatz in Ihrem Online-Shop!</summary>
+    <description>FINDOLOGIC, die intelligente Such-Software f&#xFC;r mehr Umsatz in Ihrem Online-Shop!&#xD;
+&#xD;
+In den meisten Online-Shops reicht ein klitzekleiner Tippfehler, die Verwechslung von Plural und Singular oder ein Rechtschreibfehler und schon findet der Kunde den gew&#xFC;nschten Artikel nicht. Sogar bei den h&#xE4;ufigsten 10 Suchbegriffen liefern die Suchergebnisse oft nicht die Artikel, die Ihr Kunde w&#xFC;nscht. Das kostet Umsatz!&#xD;
+&#xD;
+Kunden verlassen Ihren Shop ohne zu finden was sie suchen? Damit ist jetzt Schluss: stop searching &#x2013; find!&#xD;
+&#xD;
+Die intelligente Such-Software ab 30 &#x20AC; im Monat!&#xD;
+http://www.findologic.com&#xD;
+&#xD;
+Neben einem intelligentem Ranking und einer ausgekl&#xFC;gelten Fehlertolerantz bietet FINDOLOGIC u.a. auch folgende Verbesserungen f&#xFC;r Ihren Verkauf:&#xD;
+&#xD;
+Autovervollst&#xE4;ndigung: Bereits beim Eintippen der ersten Buchstaben werden dem Kunden sinnvolle Begriffe und Begriffserg&#xE4;nzungen vorgeschlagen. Ihr Kunde findet sich sofort in Ihrem Shop zurecht.&#xD;
+&#xD;
+Folgende Dateien werden von der FINDOLOGIC-Extension &#xFC;berschrieben. Sollten andere installierte Extensions die selben Dateien &#xFC;berschreiben kommt es zu einem Konflikt, der manuelle Anpassungen erfordert:&#xD;
+&#xD;
+Mage_CatalogSearch_Block_Autocomplete&#xD;
+&#xD;
+Mage_catalog_Block_product_list_toolbar&#xD;
+&#xD;
+</description>
+    <notes>FINDOLOGIC, die intelligente Such-Software f&#xFC;r mehr Umsatz in Ihrem Online-Shop!&#xD;
+&#xD;
+In den meisten Online-Shops reicht ein klitzekleiner Tippfehler, die Verwechslung von Plural und Singular oder ein Rechtschreibfehler und schon findet der Kunde den gew&#xFC;nschten Artikel nicht. Sogar bei den h&#xE4;ufigsten 10 Suchbegriffen liefern die Suchergebnisse oft nicht die Artikel, die Ihr Kunde w&#xFC;nscht. Das kostet Umsatz!&#xD;
+&#xD;
+Kunden verlassen Ihren Shop ohne zu finden was sie suchen? Damit ist jetzt Schluss: stop searching &#x2013; find!&#xD;
+&#xD;
+Die intelligente Such-Software ab 30 &#x20AC; im Monat!&#xD;
+http://www.findologic.com&#xD;
+&#xD;
+Neben einem intelligentem Ranking und einer ausgekl&#xFC;gelten Fehlertolerantz bietet FINDOLOGIC u.a. auch folgende Verbesserungen f&#xFC;r Ihren Verkauf:&#xD;
+&#xD;
+Autovervollst&#xE4;ndigung: Bereits beim Eintippen der ersten Buchstaben werden dem Kunden sinnvolle Begriffe und Begriffserg&#xE4;nzungen vorgeschlagen. Ihr Kunde findet sich sofort in Ihrem Shop zurecht.&#xD;
+&#xD;
+Folgende Dateien werden von der FINDOLOGIC-Extension &#xFC;berschrieben. Sollten andere installierte Extensions die selben Dateien &#xFC;berschreiben kommt es zu einem Konflikt, der manuelle Anpassungen erfordert:&#xD;
+&#xD;
+    Mage_CatalogSearch_Block_Autocomplete&#xD;
+&#xD;
+    Mage_catalog_Block_product_list_toolbar&#xD;
+&#xD;
+</notes>
+    <authors><author><name>Dixeno</name><user>Dixeno</user><email>c.schmidt@dixeno.de</email></author></authors>
+    <date>2014-09-24</date>
+    <time>05:54:36</time>
+    <contents><target name="magecommunity"><dir name="Dixeno"><dir name="Findologic"><dir name="Block"><file name="Autocomplete.php" hash="f3a7367ce5a4bfbf77f95feecf14fc56"/><dir name="Export"><file name="Productlist.php" hash="8116e32697a7c61260b19b077a6fafd7"/></dir><dir name="Layer"><dir name="Filter"><file name="Abstract.php" hash="a0328b23564a165e748a09504c3c8086"/><file name="Attribute.php" hash="e98a507ae67375e44edf0c1c58cefd8d"/><file name="Categories.php" hash="7bd3f77353f38165238e469ce62a1f6d"/><file name="Companies.php" hash="cf57c3e59550a1eb62450d199fbb1a0a"/><file name="Prices.php" hash="d2838b2e62158d8b2d489c0157b23de1"/></dir></dir><file name="Layer.php" hash="1e20c0153efcdb797da95904ac434bd2"/><file name="Logo.php" hash="99ff40c51feac58b12b6651682c9288e"/><dir name="Result"><file name="List.php" hash="77dd279b95740d970595a9f97da2336f"/></dir><dir name="System"><dir name="Config"><dir name="Form"><dir name="Field"><file name="Status.php" hash="c992e5ea1d460819ce6b66ae595956f1"/></dir></dir></dir></dir><file name="Toolbar.php" hash="b99d1fbfb6a8f704056a91ce6f38e807"/></dir><dir name="Helper"><file name="Data.php" hash="3573aca7421b5a86d85b4a04287601ad"/></dir><dir name="Model"><file name="ExportCatalog.php" hash="6801f542ed992991718e6702eb6ad1c1"/><file name="Layer.php" hash="40d26ab5904bd90b14c45c15a9e8d01c"/><dir name="Mysql4"><dir name="Fulltext"><file name="Collection.php" hash="376f241d5125dd70dcb93f7dc075b756"/></dir></dir><dir name="System"><dir name="Config"><dir name="Source"><file name="Logo.php" hash="9a5466b678cc787754a8d17a82a02d67"/><file name="Timeout.php" hash="d6850a35925877b47a896616fa28a140"/></dir></dir></dir></dir><dir name="controllers"><file name="CsvController.php" hash="5c9ffe5eb7fd239e77802dc91315dd6c"/><file name="IndexController.php" hash="58e6981e651af8fa8f460aa31dd6ae4a"/><file name="ResultController.php" hash="eb90d3fc8d37f67b44d693b66994c34c"/></dir><dir name="etc"><file name="adminhtml.xml" hash="f2785f2077be3b0d6bda485111c1114a"/><file name="config.xml" hash="71d4e56e1cdb8d79b54f23306071abb3"/><file name="system.xml" hash="47893923f8f75bec40f3a8a9a5246599"/></dir><dir name="sql"><dir name="findologic_setup"><file name="mysql4-install-1.2.0.php" hash="fe803e031972f20e8ef7cb834cc43dba"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="findologic.xml" hash="47d79ab49b602b55aca5c06576426940"/></dir><dir name="template"><dir name="findologic"><dir name="layer"><file name="filter.phtml" hash="f19268b9728904fbb91a4660c97a5a10"/></dir><file name="layer.phtml" hash="c440b9f00cdd19525158d8d5ab185620"/><file name="logo.phtml" hash="b9b7fc70d76beacb13dd89dc42598d0d"/><file name="toolbar.phtml" hash="a58e8856fe3c31ae8071f11051ce84bc"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Dixeno_Findologic.xml" hash="0eaffdc11aeb58cb7976fca0931930fa"/></dir></target><target name="magelocale"><dir><dir name="de_DE"><file name="Dixeno_Findologic.csv" hash="f6d7b48e6019ea68db11fb6fb3f71661"/><file name="Dixeno_Findologic_Admin.csv" hash="7f93a85fe1ba75908f8561c6125de76f"/></dir><dir name="en_US"><file name="Dixeno_Findologic.csv" hash="cb0d2f6559d12dde2f474e58b2ad8ccd"/></dir></dir></target><target name="mageweb"><dir name="."><file name="autocomplete.php" hash="c28627b4a29b6c2e0190e5c5685d97a7"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

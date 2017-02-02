@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<!--
+	/*                                                                       *
+	* This script is part of the findologic search project			         *
+	*                                                                        *
+	* findologic is free software; you can redistribute it and/or modify  *
+	* it under the terms of the GNU General Public License version 2 as      *
+	* published by the Free Software Foundation.                             *
+	*                                                                        *
+	* This script is distributed in the hope that it will be useful, but     *
+	* WITHOUT ANY WARRANTY; without even the implied warranty of MERCHAN-    *
+	* TABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General      *
+	* Public License for more details.                                       *
+	*                                                                        *
+	* @version $Id: config.xml 500 2010-08-16 16:43:19Z weller $
+	* @license http://opensource.org/licenses/gpl-license.php GNU Public License, version 2
+	*/
+-->
+<config>
+	<modules>
+		<Dixeno_Findologic>
+			<active>true</active>
+			<version>1.2.0</version>
+		</Dixeno_Findologic>
+	</modules>
+	
+	<global>
+		<resources>
+            <findologic_setup>
+                <setup>
+                    <module>Dixeno_Findologic</module>
+                    <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </findologic_setup>
+            <findologic_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </findologic_write>
+            <findologic_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </findologic_read>
+        </resources>
+		<helpers>
+			<findologic>
+				<class>Dixeno_Findologic_Helper</class>
+			</findologic>
+		</helpers>
+		
+		<blocks>
+			<findologic>
+				<class>Dixeno_Findologic_Block</class>
+			</findologic>
+			<catalogsearch>
+				<rewrite>
+					<autocomplete>Dixeno_Findologic_Block_Autocomplete</autocomplete>
+					<layer>Dixeno_Findologic_Block_Layer</layer>
+				</rewrite>
+			</catalogsearch>
+			<catalog>
+				<rewrite>
+					<product_list_toolbar>Dixeno_Findologic_Block_Toolbar</product_list_toolbar>
+				</rewrite>
+			</catalog>
+		</blocks>     
+		<models>
+			<findologic>
+				<class>Dixeno_Findologic_Model</class>
+				<resourceModel>findologic_mysql4</resourceModel>
+			</findologic>
+            <findologic_mysql4>
+                <class>Dixeno_Findologic_Model_Mysql4</class>
+            </findologic_mysql4>			
+			<catalogsearch>
+				<rewrite>
+					<layer>Dixeno_Findologic_Model_Layer</layer>
+				</rewrite>
+			</catalogsearch>			
+		</models>
+		       
+		<!--<rewrite>
+			<findologic>
+				<from><![CDATA[#^/findologic/#]]></from>
+				<to>/findologic/index/productlist/</to>
+			</findologic>
+		</rewrite>-->
+		<rewrite>
+			<findologic_result>
+				<from><![CDATA[#^/catalogsearch/result/#]]></from>
+				<to>/findologic/result/</to>
+			</findologic_result>
+		</rewrite>
+		
+	</global>
+	
+	<frontend>
+		<layout>
+			<updates>
+				<findologic>
+					<file>findologic.xml</file>
+				</findologic>			
+			</updates>
+		</layout>
+		
+		<routers>
+			<findologic>
+				<use>standard</use>
+				<args>
+					<module>Dixeno_Findologic</module>
+					<frontName>findologic</frontName>
+				</args>
+			</findologic>
+		</routers>  
+		<translate>
+			<modules>
+				<Dixeno_Findologic>
+					<files>
+						<default>Dixeno_Findologic.csv</default>
+					</files>
+				</Dixeno_Findologic>
+			</modules>
+		</translate>       
+	</frontend>        
+	
+	<adminhtml>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<findologic>
+											<title>Findologic Search</title>
+										</findologic>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<translate>
+			<modules>
+				<Dixeno_Findologic>
+					<files>
+						<default>Dixeno_Findologic_Admin.csv</default>
+					</files>
+				</Dixeno_Findologic>
+			</modules>
+		</translate>       
+	</adminhtml>
+	
+	<default>
+		<dixeno_log>
+			<findologic>
+				<module>Dixeno_Findologic</module>
+				<title>Findologic</title>
+			</findologic>
+		</dixeno_log>
+		<findologic>
+			<config>
+				<timeout>1</timeout>
+				<url>srv06.findologic.com</url>
+				<url_search>/ps/xml/</url_search>
+				<url_autocomplete>/ps/xml/autocomplete.php</url_autocomplete>
+				<url_alivetest>/ps/xml/alivetest.php</url_alivetest>
+				<demo>0</demo>
+				<customer_profiles>0</customer_profiles>
+			</config>
+			<export>
+				<username>findologic</username>
+			</export>
+			<error_handling>
+				<enabled>0</enabled>
+				<max_attempts>3</max_attempts>
+				<idle_time>10</idle_time>
+			</error_handling>
+		</findologic>
+		<system>
+			<findologic>
+				<logos>
+					<logo1 translate="label">
+						<label>color / white </label>
+						<url>https://secure.findologic.com/www/images/FINDOLOGIC_claimer_german.png</url>
+						<default>true</default>
+					</logo1>
+					<logo2 translate="label">
+						<label>color / transparent</label>
+						<url>https://secure.findologic.com/www/images/FINDOLOGIC_claimer_german_transparent.png</url>
+					</logo2>
+					<logo3 translate="label">
+						<label>monochrome / white</label>
+						<url>https://secure.findologic.com/www/images/FINDOLOGIC_claimer_german_rot_grau.png</url>
+					</logo3>
+					<logo4 translate="label">
+						<label>monochrome / transparent</label>
+						<url>https://secure.findologic.com/www/images/FINDOLOGIC_claimer_german_rot_grau_transparent.png</url>
+					</logo4>					
+				</logos>
+			</findologic>
+		</system>
+	</default>    
+	
+	
+</config>

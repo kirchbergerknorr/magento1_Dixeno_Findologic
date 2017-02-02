@@ -1,0 +1,12 @@
+
+
+<ol>
+<?php foreach ($this->getItems() as $_item): ?>
+    <li>
+        <?php if ($_item->getHits()): ?>
+        <a href="<?php echo $this->urlEscape($_item->getUrl()) ?>"><?php echo $_item->getName() ?></a>
+        (<?php echo $_item->getHits() ?>)
+        <?php endif; ?>
+    </li>
+<?php endforeach ?>
+</ol>
